@@ -1,6 +1,3 @@
-from numpy import empty
-
-
 def study_schedule(permanence_period, target_time):
     count_students = 0
     if not target_time:
