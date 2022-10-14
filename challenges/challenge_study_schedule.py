@@ -3,7 +3,8 @@ def study_schedule(permanence_period, target_time):
     if not target_time:
         return None
     for entry_hour, exits_hour in permanence_period:
-        if type(entry_hour) != int or type(exits_hour) != int:
+        # isinstance verifica se entry_hour é uma instancia da classe int
+        if not isinstance(entry_hour, int) or type(exits_hour) != int:
             return None
         if entry_hour <= target_time <= exits_hour:
             count_students += 1
